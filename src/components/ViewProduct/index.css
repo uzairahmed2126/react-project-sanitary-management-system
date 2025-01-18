@@ -1,0 +1,13 @@
+body {
+  background: #7f1d1d;
+  text-transform: capitalize;
+}
+#sort-by {
+  background-color: #023047;
+  border-radius: 0.3rem;
+  color: #f9f9f9;
+  cursor: pointer;
+  height: 5vh;
+  align-items: center;
+  justify-content: center;
+}
