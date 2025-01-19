@@ -11,7 +11,7 @@ const router = createBrowserRouter([
   { path: "/", element: <Form /> },
   { path: "accessories", element: <Accessories /> },
   { path: "product-order-form", element: <ProductOrderForm /> },
-  { path: "view-produc", element: <ViewProduct /> },
+  { path: "view-product", element: <ViewProduct /> },
 ]);
 function App() {
   return (

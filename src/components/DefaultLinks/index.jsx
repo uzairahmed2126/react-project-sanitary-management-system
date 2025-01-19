@@ -1,21 +1,19 @@
-import { replace, useNavigate } from "react-router-dom";
-function DefaultLinks({}) {
-  const handleClickRouting = (e) => {
-    const btnName = e.target.textContent;
-    console.log(btnName);
-    // console.log(e.target.textContent);
-    // const buttonName = e.target.textContent;
-    const navigate = useNavigate();
-    if (btnName === "Home") {
-      navigate("/");
-    } else if (btnName === "Accessories") {
-      navigate("/accessories", { replace: true });
-    } else {
-      alert("sdf");
-    }
-  };
+function DefaultLinks() {
   return (
-    <div onClick={handleClickRouting} className="pointer-events-none">
+    <div
+      // onClick={(e) => {
+      //   const btnName = e.target.textContent;
+      //   console.log(btnName);
+      //   if (btnName === "Home") {
+      //     // navigate("/");
+      //   } else if (btnName === "Accessories") {
+      //     // navigate("/accessories");
+      //   } else {
+      //     alert("sdf");
+      //   }
+      // }}
+      className="grid grid-cols-4 pointer-events-none justify-center text-center w-screen font-bold"
+    >
       <button className="bg-red-200 p-3 border-2 pointer-events-auto">
         Home
       </button>

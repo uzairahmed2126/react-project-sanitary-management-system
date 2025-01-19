@@ -1,4 +1,4 @@
-import { Outlet, Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 function Accessories() {
   const elementColor =
     "relative overflow-hidden bg-slate-400 w-1/4 p-10 rounded-lg cursor-pointer text-2xl text-red-800 hover:text-red-100 hover:bg-slate-500 transition duration-300 group";
