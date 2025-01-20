@@ -9,14 +9,38 @@ import {
 
 const router = createBrowserRouter([
   { path: "/", element: <Form /> },
-  { path: "accessories", element: <Accessories /> },
-  { path: "product-order-form", element: <ProductOrderForm /> },
-  { path: "view-product", element: <ViewProduct /> },
+  // { path: "/nav", element: <DefaultLinks /> },
+  {
+    path: "accessories",
+    element: (
+      <div>
+        <DefaultLinks />
+        <Accessories />
+      </div>
+    ),
+  },
+  {
+    path: "product-order-form",
+    element: (
+      <div>
+        <DefaultLinks />
+        <ProductOrderForm />
+      </div>
+    ),
+  },
+  {
+    path: "view-product",
+    element: (
+      <div>
+        <DefaultLinks />
+        <ViewProduct />
+      </div>
+    ),
+  },
 ]);
 function App() {
   return (
     <>
-      <DefaultLinks />
       <RouterProvider router={router} />
     </>
   );

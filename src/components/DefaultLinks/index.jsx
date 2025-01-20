@@ -1,31 +1,39 @@
+import { Link } from "react-router-dom";
 function DefaultLinks() {
+  const path = [
+    ["/", "Home"],
+    ["/accessories", "Accessories"],
+    ["/product-order-form", "Product Order Form"],
+    ["/view-product", "View Product"],
+  ];
   return (
-    <div
-      // onClick={(e) => {
-      //   const btnName = e.target.textContent;
-      //   console.log(btnName);
-      //   if (btnName === "Home") {
-      //     // navigate("/");
-      //   } else if (btnName === "Accessories") {
-      //     // navigate("/accessories");
-      //   } else {
-      //     alert("sdf");
-      //   }
-      // }}
-      className="grid grid-cols-4 pointer-events-none justify-center text-center w-screen font-bold"
-    >
-      <button className="bg-red-200 p-3 border-2 pointer-events-auto">
-        Home
-      </button>
-      <button className="bg-red-200 p-3 border-2 pointer-events-auto">
+    <div className="grid grid-cols-4 justify-center text-center w-screen font-bold">
+      {path.map(([path, name]) => {
+        return (
+          <Link key={path} to={path} className="bg-red-200 p-3 border-2">
+            {name}
+          </Link>
+        );
+      })}
+
+      {/* <Link
+        to="/accessories"
+        className="bg-red-200 p-3 border-2 pointer-events-auto"
+      >
         Accessories
-      </button>
-      <button className="bg-red-200 p-3 border-2 pointer-events-auto">
+      </Link>
+      <Link
+        to="/product-order-form"
+        className="bg-red-200 p-3 border-2 pointer-events-auto"
+      >
         Product Order Form
-      </button>
-      <button className="bg-red-200 p-3 border-2 pointer-events-auto">
+      </Link>
+      <Link
+        to="/view-product"
+        className="bg-red-200 p-3 border-2 pointer-events-auto"
+      >
         View Product
-      </button>
+      </Link> */}
     </div>
   );
 }
