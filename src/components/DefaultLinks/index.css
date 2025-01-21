@@ -1,0 +1,13 @@
+a.active {
+  background: #f87171;
+  &:hover {
+    background: #f87171;
+  }
+}
+#log-out {
+  &:hover {
+    background: darkred;
+    color: antiquewhite;
+  }
+}
+
